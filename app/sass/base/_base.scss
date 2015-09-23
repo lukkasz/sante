@@ -1,0 +1,43 @@
+// ================================================================================
+// Base Styles
+// ================================================================================
+
+* {
+	box-sizing: border-box;
+}
+
+p {
+	color: $text-color--primary !important;
+	&.secondary {
+		color: $text-color--secondary !important;
+	}
+}
+
+h1 {
+	color: $text-color--heading;
+}
+
+a {
+	color: $text-color--link;
+	
+	&:hover {
+		color: $text-color--link--active;
+		text-decoration: none;
+	}
+}
+
+.topbar {
+	border-bottom: 1px solid $mercury;
+	
+	&__item {
+		@include make-xs-column-offset(1);
+		display: inline-block;
+		font-size: 12px;
+
+		&:first-child {
+			@include make-xs-column-offset(0);
+		}
+	}
+	
+}
+

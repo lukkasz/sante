@@ -1,0 +1,52 @@
+// ================================================================================
+// Global Configuration
+// ================================================================================
+
+
+@import "bootstrap";
+	
+// Font Stacks
+$fonts-url: "//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Oswald:400,700,300";
+$font-family--primary: 'Lato', sans-serif;
+$font-family--heading: 'Oswald', sans-serif;
+
+
+// Font Weights
+$font-weight--thin: 	'300';
+$font-weight--normal: '400';
+$font-weight--bold: 	'700';
+
+
+// Descriptive Base Colors:
+$pute-white: #fff; 
+$white: #fdfdfd;
+$black: #050505;
+$gray: #8d8d8d;
+
+$alabaster: #fafafa;  					// Izdvojeni tretmani BG color
+$boulder: #747474; 							// Heading Color
+$bouquet: #a0739f;							// primary Color
+$mercury: #eae8e8; 							// borders and lines
+$outer-space: #343e44; 					// footer
+$outer-space--darker: #31383d; 	// fotter copyright
+$silver-chalice: #a7a5a5;				// text color;
+
+$color--primary: $bouquet;
+
+
+// Base Text Size
+$base__font-size: 16px;
+$base__line-height: 22px;
+
+
+// Text Color
+$text-color--primary: 						$silver-chalice;
+$text-color--secondary: 					$gray;
+
+$text-color--heading: 						$boulder;
+$text-color--heading--secondary: 	$white;
+
+$text-color--link: 								$boulder;
+$text-color--link--active:				lighten($text-color--link, 20%);
+
+
