@@ -6,11 +6,21 @@
 	box-sizing: border-box;
 }
 
+body {
+	font-family: $font-family--primary;
+	font-size: 16px;
+	font-weight: 400;
+}
+
 p {
 	color: $text-color--primary !important;
 	&.secondary {
 		color: $text-color--secondary !important;
 	}
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: $font-family--heading;
 }
 
 h1 {
@@ -29,10 +39,19 @@ a {
 .topbar {
 	border-bottom: 1px solid $mercury;
 	text-align: center;
+	padding: 2px 0;
 	
 	&__item {
 		@include make-xs-column-offset(1);
-		font-size: 12px;
+		font-size: 14px;
+
+		& > i {
+			padding-right: 8px;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-top: -5px;
+			color: $color--primary;
+		}
 
 		&:first-child {
 			@include make-xs-column-offset(0);
@@ -42,11 +61,78 @@ a {
 }
 
 .navbar {
-	&-nav > li {
-		border-bottom: 1px solid $silver-chalice;
+	position: relative; 
 
-		@media (min-width: 750px) {
-			border-bottom: none;
+	&-header {
+
+		@media (min-width: $screen-sm-min) {
+			margin-top: 20px;
+		}
+	}
+	
+	&-nav {
+
+		& > li {
+			border-bottom: 1px solid $silver-chalice;
+
+			@media (min-width: $screen-sm-min) {
+				border-bottom: none;
+				margin-left: 25px;
+				&:hover,
+				&:focus,
+				&:active {
+					&:after {
+						content: "";
+						position: absolute;
+						border-top: 3px solid $color--primary;
+						width: 100%;
+						text-align: center;
+						top: 0;
+					}
+				} // end &:hover
+			} // end @media
+
+			& > a {
+				text-transform: uppercase;
+
+				@media (min-width: $screen-sm-min) {
+					padding: 35px 0 0 0;
+					&:hover, 
+					&:focus,
+					&:active {
+						background: transparent;
+					}
+				}
+				
+			}
+		} // end & > li 
+	}
+}
+
+.brand {
+	display: block;
+	float: left;
+
+	&__logo {
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 70px;
+
+	}
+	&__name {
+		display: inline-block;
+		font-size: 40px;
+		text-transform: uppercase;
+		vertical-align: middle;
+		margin: 0 0 0 10px;;
+		padding: 0;
+		letter-spacing: 3px;
+
+		&>span {
+			display: block;
+			font-size: 10px;
+			letter-spacing: .8px;
+			margin-top: 5px;
 		}
 	}
 }
@@ -58,40 +144,45 @@ a {
 
 .lead {
 	background: $gray;
-	height: 450px;
+	height: 500px;
 	position: relative;
 
 	&__image {
 		background-image: url('../images/background-image-fullbody.png');
 		height: inherit;
 		background-repeat: no-repeat;
-		background-position: right bottom;
+		background-position: right 15px bottom;
 	}
 
 	&__text {
-
 		&--primary {
+			margin-top: 60px;
 			font-size: 24px;
 			color: $color--primary !important;
 		}
-
 		&--accent {
 			//display: inline-block;
 			color: $white !important;
-			font-size: 48px;
+			font-size: 68px;
 			text-transform: uppercase;
 			font-weight: 800;
+			margin-bottom: 0;
 
 			& > span {
 				display: inline-block;
 				background-color: $black;
 				padding: 0 15px;
 				margin-bottom: 10px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 
 		&--secondary {
 			font-size: 16px;
+			margin-top: 5px;
 			color: $black !important;
 		}
 	}
@@ -101,14 +192,31 @@ a {
 	position: absolute;
 	bottom: 0;
 	&__item {
-		background: red;
+		background: $color--primary;
+		color: $white;
 		float: left;
-		padding: 15px 20px;
+		padding: 30px 20px;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 20px;
+		font-weight: bold;
+		width: 130px;
 
 		& > span {
 			display: block;
+			font-size: 16px;
+			font-weight: 400;
+		}
+
+		&:nth-child(2) {
+			background: darken($color--primary, 2%);
+		}
+
+		&:nth-child(3) {
+			background: darken($color--primary, 4%);
 		}
 	}
+
 	
 }
 
@@ -143,6 +251,7 @@ a {
 // Helpers
 .border--primary {
 	border: 2px solid $color--primary;
+	margin-bottom: 0;
 	width: 20%;
 }
 
@@ -192,7 +301,25 @@ a {
 
 .cta {
 	background: $color--primary;
-	height: 80px;
-	
+	padding: 20px;
+	text-align: center;
+
+	&__text {
+		font-size: 40px;
+		color: $white;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&__btn {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 24px;
+		color: $white;
+		height: inherit;
+		padding: 10px 15px;
+		border: 1px solid $white;
+		border-radius: 5px;
+		margin-left: 40px;
+	}
 }
 
