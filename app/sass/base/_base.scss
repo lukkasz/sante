@@ -28,16 +28,171 @@ a {
 
 .topbar {
 	border-bottom: 1px solid $mercury;
+	text-align: center;
 	
 	&__item {
 		@include make-xs-column-offset(1);
-		display: inline-block;
 		font-size: 12px;
 
 		&:first-child {
 			@include make-xs-column-offset(0);
 		}
 	}
+	
+}
+
+.navbar {
+	&-nav > li {
+		border-bottom: 1px solid $silver-chalice;
+
+		@media (min-width: 750px) {
+			border-bottom: none;
+		}
+	}
+}
+
+
+.icon-bar {
+	background: $color--primary;
+}
+
+.lead {
+	background: $gray;
+	height: 450px;
+	position: relative;
+
+	&__image {
+		background-image: url('../images/background-image-fullbody.png');
+		height: inherit;
+		background-repeat: no-repeat;
+		background-position: right bottom;
+	}
+
+	&__text {
+
+		&--primary {
+			font-size: 24px;
+			color: $color--primary !important;
+		}
+
+		&--accent {
+			//display: inline-block;
+			color: $white !important;
+			font-size: 48px;
+			text-transform: uppercase;
+			font-weight: 800;
+
+			& > span {
+				display: inline-block;
+				background-color: $black;
+				padding: 0 15px;
+				margin-bottom: 10px;
+			}
+		}
+
+		&--secondary {
+			font-size: 16px;
+			color: $black !important;
+		}
+	}
+}
+
+.working-time {
+	position: absolute;
+	bottom: 0;
+	&__item {
+		background: red;
+		float: left;
+		padding: 15px 20px;
+
+		& > span {
+			display: block;
+		}
+	}
+	
+}
+
+
+
+.service {
+
+	&__header {
+		height: 60px;
+		border-bottom: 1px solid $color--border;
+	}
+
+	&__title {
+		float: left;
+		margin: 0;
+		padding: 0;
+		line-height: 60px;
+	}
+
+	&__nav {
+		line-height: 60px;
+		float: right;
+	}
+
+	&__content {
+		@include make-row();
+		margin-top: 20px;
+	}
+
+
+}
+// Helpers
+.border--primary {
+	border: 2px solid $color--primary;
+	width: 20%;
+}
+
+.featured {
+	background: $alabaster;
+	padding: 60px 0;
+	
+	&__header {
+		text-align: center;
+		& > i {
+			font-size: 24px;
+			color: $color--primary;
+		}
+	}
+
+	&__content {
+		@include make-row();
+	}
+}
+
+.product {
+	@include clearfix();
+	margin: 10px 0;
+
+	&__img {
+		max-height: 300px;
+		overflow: hidden;
+
+		@media (min-width: $screen-sm-min) {
+			width: 50%;
+			float: left;
+			max-height: 150px;
+			overflow: hidden;
+		}
+	} // end &__img 
+
+	&__body {
+		
+		@media (min-width: $screen-sm-min) {
+			width: 50%;
+			float: left;
+			padding-left: 15px;
+		}
+	}	// end &__body 
+	
+}
+
+.cta {
+	background: $color--primary;
+	height: 80px;
 	
 }
 

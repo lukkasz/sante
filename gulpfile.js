@@ -45,10 +45,11 @@ gulp.task('html', ['styles'], function(){
 
 gulp.task('fonts', function(){
 	return gulp.src(require('main-bower-files')({
+		base: 'bower_components',
 		filter: '**/*.{eot,svg,ttf,woff,woff2}'
 	}).concat(bases.app + 'fonts/**/*'))
-		.pipe(gulp.dest(bases.dist + 'fonts'))
-		.pipe(gulp.dest(bases.tmp + 'fonts'));
+		.pipe(gulp.dest(bases.dist + 'fonts/bootstrap'))
+		.pipe(gulp.dest(bases.tmp + 'fonts/bootstrap'));
 });
 
 gulp.task('images', function(){

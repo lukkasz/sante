@@ -10,5 +10,12 @@
     "bootstrap-sass": "~3.3.5",
     "jquery": "^1",
     "modernizr": "~2.8.3"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/fonts/bootstrap/*"
+      ]
+    }
   }
 }
