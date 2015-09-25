@@ -1,0 +1,91 @@
+// ================================================================================
+// Footer Style
+// ================================================================================
+
+.footer-wrap {
+	background: $outer-space;
+	marigin: 0;
+}
+
+.footer {
+	color: $mercury;
+	
+	&__brand {
+		//color: $text-color--primary;
+		font-size: 32px;
+		&--small {
+			font-size: 8px;
+			display: block;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__header {
+		font-size: 18px;
+		font-family: 'Oswald', sans-serif;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+	}
+
+	&__list {
+		a {
+			color: $color--primary;
+			display: block;
+		}
+	}
+}
+
+.list {	
+	margin: 0;
+	padding-left: 35px;
+	
+	&__item {
+		display: block;
+		margin: 0 0 15px 0;
+		font-size: 14px;
+
+		&:before {
+			font-family: 'Glyphicons Halflings';
+			color: $text-color--secondary;
+			float: left;
+			font-size: 18px;
+			margin-top: -2px;
+			margin-left: -35px;	
+		}
+
+		&--bullhorn {
+			@extend .list__item;
+			
+			&:before {
+				content: "\e122";	
+			}
+		}
+
+		&--address {
+			@extend .list__item;
+
+			&:before {
+				content: "\e021";	
+			}
+		}
+
+		&--phone {
+			@extend .list__item;
+
+			&:before {
+				content: "\e182";	
+			}
+		}
+
+		&--email {
+			@extend .list__item;
+
+			&:before {
+				content: "\2709";	
+			}
+		}
+
+	}// end &__item
+
+}

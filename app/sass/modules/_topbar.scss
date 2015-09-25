@@ -1,0 +1,27 @@
+// ================================================================================
+// Topbar Style
+// ================================================================================
+
+.topbar {
+	border-bottom: 1px solid $mercury;
+	text-align: center;
+	padding: 2px 0;
+	
+	&__item {
+		@include make-xs-column-offset(1);
+		font-size: 14px;
+
+		& > i {
+			padding-right: 8px;
+			font-size: 14px;
+			vertical-align: middle;
+			margin-top: -5px;
+			color: $color--primary;
+		}
+
+		&:first-child {
+			@include make-xs-column-offset(0);
+		}
+	}
+	
+}

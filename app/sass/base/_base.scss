@@ -10,6 +10,9 @@ body {
 	font-family: $font-family--primary;
 	font-size: 16px;
 	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
 }
 
 p {
@@ -36,218 +39,11 @@ a {
 	}
 }
 
-.topbar {
-	border-bottom: 1px solid $mercury;
-	text-align: center;
-	padding: 2px 0;
-	
-	&__item {
-		@include make-xs-column-offset(1);
-		font-size: 14px;
-
-		& > i {
-			padding-right: 8px;
-			font-size: 14px;
-			vertical-align: middle;
-			margin-top: -5px;
-			color: $color--primary;
-		}
-
-		&:first-child {
-			@include make-xs-column-offset(0);
-		}
-	}
-	
-}
-
-.navbar {
-	position: relative; 
-
-	&-header {
-
-		@media (min-width: $screen-sm-min) {
-			margin-top: 20px;
-		}
-	}
-	
-	&-nav {
-
-		& > li {
-			border-bottom: 1px solid $silver-chalice;
-
-			@media (min-width: $screen-sm-min) {
-				border-bottom: none;
-				margin-left: 25px;
-				&:hover,
-				&:focus,
-				&:active {
-					&:after {
-						content: "";
-						position: absolute;
-						border-top: 3px solid $color--primary;
-						width: 100%;
-						text-align: center;
-						top: 0;
-					}
-				} // end &:hover
-			} // end @media
-
-			& > a {
-				text-transform: uppercase;
-
-				@media (min-width: $screen-sm-min) {
-					padding: 35px 0 0 0;
-					&:hover, 
-					&:focus,
-					&:active {
-						background: transparent;
-					}
-				}
-				
-			}
-		} // end & > li 
-	}
-}
-
-.brand {
-	display: block;
-	float: left;
-
-	&__logo {
-		display: inline-block;
-		vertical-align: middle;
-		max-width: 70px;
-
-	}
-	&__name {
-		display: inline-block;
-		font-size: 40px;
-		text-transform: uppercase;
-		vertical-align: middle;
-		margin: 0 0 0 10px;;
-		padding: 0;
-		letter-spacing: 3px;
-
-		&>span {
-			display: block;
-			font-size: 10px;
-			letter-spacing: .8px;
-			margin-top: 5px;
-		}
-	}
+section {
+	padding: 60px 0;
 }
 
 
-.icon-bar {
-	background: $color--primary;
-}
-
-.lead {
-	background: $gray;
-	height: 500px;
-	position: relative;
-
-	&__image {
-		background-image: url('../images/background-image-fullbody.png');
-		height: inherit;
-		background-repeat: no-repeat;
-		background-position: right 15px bottom;
-	}
-
-	&__text {
-		&--primary {
-			margin-top: 60px;
-			font-size: 24px;
-			color: $color--primary !important;
-		}
-		&--accent {
-			//display: inline-block;
-			color: $white !important;
-			font-size: 68px;
-			text-transform: uppercase;
-			font-weight: 800;
-			margin-bottom: 0;
-
-			& > span {
-				display: inline-block;
-				background-color: $black;
-				padding: 0 15px;
-				margin-bottom: 10px;
-
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-		}
-
-		&--secondary {
-			font-size: 16px;
-			margin-top: 5px;
-			color: $black !important;
-		}
-	}
-}
-
-.working-time {
-	position: absolute;
-	bottom: 0;
-	&__item {
-		background: $color--primary;
-		color: $white;
-		float: left;
-		padding: 30px 20px;
-		text-transform: uppercase;
-		text-align: center;
-		font-size: 20px;
-		font-weight: bold;
-		width: 130px;
-
-		& > span {
-			display: block;
-			font-size: 16px;
-			font-weight: 400;
-		}
-
-		&:nth-child(2) {
-			background: darken($color--primary, 2%);
-		}
-
-		&:nth-child(3) {
-			background: darken($color--primary, 4%);
-		}
-	}
-
-	
-}
-
-
-
-.service {
-
-	&__header {
-		height: 60px;
-		border-bottom: 1px solid $color--border;
-	}
-
-	&__title {
-		float: left;
-		margin: 0;
-		padding: 0;
-		line-height: 60px;
-	}
-
-	&__nav {
-		line-height: 60px;
-		float: right;
-	}
-
-	&__content {
-		@include make-row();
-		margin-top: 20px;
-	}
-
-
-}
 // Helpers
 .border--primary {
 	border: 2px solid $color--primary;
@@ -255,71 +51,19 @@ a {
 	width: 20%;
 }
 
-.featured {
-	background: $alabaster;
-	padding: 60px 0;
-	
-	&__header {
-		text-align: center;
-		& > i {
-			font-size: 24px;
-			color: $color--primary;
-		}
-	}
 
-	&__content {
-		@include make-row();
-	}
+// Bootstrap overrides
+.nav .open > a,
+.nav .open > a:focus {
+	background-color: transparent;
 }
 
-.product {
-	@include clearfix();
-	margin: 10px 0;
+.navbar-toggle {
+	margin-top: 15px;
 
-	&__img {
-		max-height: 300px;
-		overflow: hidden;
-
-		@media (min-width: $screen-sm-min) {
-			width: 50%;
-			float: left;
-			max-height: 150px;
-			overflow: hidden;
-		}
-	} // end &__img 
-
-	&__body {
-		
-		@media (min-width: $screen-sm-min) {
-			width: 50%;
-			float: left;
-			padding-left: 15px;
-		}
-	}	// end &__body 
-	
-}
-
-.cta {
-	background: $color--primary;
-	padding: 20px;
-	text-align: center;
-
-	&__text {
-		font-size: 40px;
-		color: $white;
-		display: inline-block;
-		vertical-align: middle;
-	}
-	&__btn {
-		display: inline-block;
-		vertical-align: middle;
-		font-size: 24px;
-		color: $white;
-		height: inherit;
-		padding: 10px 15px;
-		border: 1px solid $white;
-		border-radius: 5px;
-		margin-left: 40px;
+	& .icon-bar {
+		width: 25px;
+		height: 3px;
+		background-color: $gray;
 	}
 }
-

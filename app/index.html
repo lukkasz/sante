@@ -15,6 +15,8 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         
         <!-- build:css styles/vendor.css -->
+        <link rel="stylesheet" href="/bower_components/owlcarousel/owl-carousel/owl.carousel.css">
+        <link rel="stylesheet" href="/bower_components/owlcarousel/owl-carousel/owl.theme.css">
         <!-- bower:css -->
         <!-- endbower -->
         <!-- endbuild -->
@@ -101,34 +103,52 @@
                     <div class="service__nav">
                         <i class="glyphicon glyphicon-menu-left"></i>
                         <i class="glyphicon glyphicon-th-large"></i>
-                        <i class="glyphicon glyphicon-menu-right"></i>
-                    </div>
+                        <i class="glyphicon glyphicon-menu-right"></i>                        
+                    </div><!-- end .service__nav -->
                 </div><!-- end .service__header -->
                 <div class="service__content">
-                    <div class="col-md-3 col-sm-6">
-                        <img src="images/lice.jpg" alt="" class="img-responsive">
-                        <h4>Tretman lica</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ratione, omnis accusamus harum blanditiis fugiat quis iusto!</p>
-                    </div><!-- end .col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <img src="images/lice.jpg" alt="" class="img-responsive">
-                        <h4>Tretman lica</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ratione, omnis accusamus harum blanditiis fugiat quis iusto!</p>
-                    </div><!-- end .col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <img src="images/lice.jpg" alt="" class="img-responsive">
-                        <h4>Tretman lica</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ratione, omnis accusamus harum blanditiis fugiat quis iusto!</p>    
-                    </div><!-- end .col-md-3 -->
-                    <div class="col-md-3 col-sm-6">
-                        <img src="images/lice.jpg" alt="" class="img-responsive">
-                        <h4>Tretman lica</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ratione, omnis accusamus harum blanditiis fugiat quis iusto!</p>
-                    </div><!-- end .col-md-3 -->
-                </div><!-- end .service__header -->
+                    <div class="owl-carousel">
+                        <div class="service__item">
+                            <img src="images/lice.jpg" alt="" class="img-responsive">
+                            <h4>Tretman lica</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ratione, omnis accusamus harum blanditiis fugiat quis iusto!</p>
+                        </div><!-- end service__item -->
+                        <div class="service__item">
+                            <img src="images/lice.jpg" alt="" class="img-responsive">
+                            <h4>Tretman lica</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ratione, omnis accusamus harum blanditiis fugiat quis iusto!</p>
+                        </div><!-- end service__item -->
+                        <div class="service__item">
+                            <img src="images/lice.jpg" alt="" class="img-responsive">
+                            <h4>Tretman lica</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ratione, omnis accusamus harum blanditiis fugiat quis iusto!</p>    
+                        </div><!-- end service__item -->
+                        <div class="service__item">
+                            <img src="images/lice.jpg" alt="" class="img-responsive">
+                            <h4>Tretman lica</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ratione, omnis accusamus harum blanditiis fugiat quis iusto!</p>
+                        </div><!-- end service__item -->
+                        <div class="service__item">
+                            <img src="images/lice.jpg" alt="" class="img-responsive">
+                            <h4>Tretman lica</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ratione, omnis accusamus harum blanditiis fugiat quis iusto!</p>
+                        </div><!-- end service__item -->
+                        <div class="service__item">
+                            <img src="images/lice.jpg" alt="" class="img-responsive">
+                            <h4>Tretman lica</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ratione, omnis accusamus harum blanditiis fugiat quis iusto!</p>
+                        </div><!-- end service__item -->
+                        <div class="service__item">
+                            <img src="images/lice.jpg" alt="" class="img-responsive">
+                            <h4>Tretman lica</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ratione, omnis accusamus harum blanditiis fugiat quis iusto!</p>
+                        </div><!-- end service__item -->
+                    </div><!-- end .owl-carousel -->
+                </div><!-- end .service__content -->
             </div><!-- end .container -->
-            <hr class="border--primary">
         </section><!-- end .service -->
+
+        <hr class="border--primary">
 
         <section class="featured">
             <div class="container">
@@ -200,22 +220,22 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
-                            <h4 class="footer__brand">SANTE</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro hic cumque molestiae nesciunt maiores non nulla neque sed quae quaerat! Accusamus nihil unde nostrum quasi excepturi perferendis rem, at libero!</p>
+                            <h4 class="footer__brand">SANTE <span class="footer__brand--small">zdravlje njega i ljepota</span></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur a dipisicing elit. Porro hic cumque molestiae nesciunt maiores non nulla neque sed quae quaerat! Accusamus nihil unde nostrum quasi excepturi perferendis rem, at libero!</p>
                         </div>
                         <div class="col-md-4">
                             <h5 class="footer__header">Novosti</h5>
-                            <ul class="facebook-news">
-                                <li class="facebook-news_item"><i class="glyphicon glyphicon-bullhorn"></i><p>Dragi klijenti iskoristitte zadnje snjiženje cijena na anticelulitne tretmane</p><a href="#">http://on.fb.me/1NF5rgS</a></li>
-                                <li class="facebook-news_item"><i class="glyphicon glyphicon-bullhorn"></i><p>Dragi klijenti iskoristitte zadnje snjiženje cijena na anticelulitne tretmane</p><a href="#">http://on.fb.me/1NF5rgS</a></li>
+                            <ul class="footer__list list">
+                                <li class="list__item--bullhorn">Dragi klijenti iskoristitte zadnje snjiženje cijena na anticelulitne tretmane <a href="#">http://on.fb.me/1NF5rgS</a></li>
+                                <li class="list__item--bullhorn">Dragi klijenti iskoristitte zadnje snjiženje cijena na anticelulitne tretmane<a href="#">http://on.fb.me/1NF5rgS</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4">
                             <h5 class="footer__header">Kontakt</h5>
-                            <ul class="contact">
-                                <li class="address"><i class="glyphicon glyphicon-home"></i>Put Pazdigrada 8, 21000 Split Hrvatska</li>
-                                <li class="contact__email"><i class="glyphicon glyphicon-envelope"></i>info@sante.hr</li>
-                                <li class="contact__phone"><i class="glyphicon glyphicon-earphone"></i>+389 95 1234 567</li>
+                            <ul class="footer__list list">
+                                <li class="list__item--address"></i>Put Pazdigrada 8, 21000 Split Hrvatska</li>
+                                <li class="list__item--email">info@sante.hr</li>
+                                <li class="list__item--phone">+389 95 1234 567</li>
                             </ul>
                         </div>
                     </div><!-- end .row -->
@@ -245,11 +265,12 @@
         <!-- endbuild -->
 
         <!-- build:js scripts/plugins.js -->
-        
+        <script src="/bower_components/owlcarousel/owl-carousel/owl.carousel.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
         <script src="js/main.js"></script>
+        <script src="js/owl-config.js"></script>
         <!-- endbuild -->
     </body>
 </html>

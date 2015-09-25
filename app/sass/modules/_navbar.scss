@@ -1,0 +1,52 @@
+// ================================================================================
+// Navabrr Style
+// ================================================================================
+
+.navbar {
+	position: relative; 
+
+	&-header {
+		padding-top: 10px;
+		@media (min-width: $screen-sm-min) {
+			padding-top: 20px;
+		}
+	}
+	
+	&-nav {
+
+		& > li {
+			border-bottom: 1px solid $silver-chalice;
+
+			@media (min-width: $screen-sm-min) {
+				border-bottom: none;
+				margin-left: 25px;
+				&:hover,
+				&:focus,
+				&:active {
+					&:after {
+						content: "";
+						position: absolute;
+						border-top: 3px solid $color--primary;
+						width: 100%;
+						text-align: center;
+						top: 0;
+					}
+				} // end &:hover
+			} // end @media
+
+			& > a {
+				text-transform: uppercase;
+
+				@media (min-width: $screen-sm-min) {
+					padding: 40px 0 0 0;
+					&:hover, 
+					&:focus,
+					&:active {
+						background: transparent;
+					}
+				}
+				
+			}
+		} // end & > li 
+	}
+}

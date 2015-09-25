@@ -1,0 +1,30 @@
+// ================================================================================
+// Product Style
+// ================================================================================
+
+.product {
+	@include clearfix();
+	margin: 10px 0;
+
+	&__img {
+		max-height: 300px;
+		overflow: hidden;
+
+		@media (min-width: $screen-sm-min) {
+			width: 50%;
+			float: left;
+			max-height: 150px;
+			overflow: hidden;
+		}
+	} // end &__img 
+
+	&__body {
+		
+		@media (min-width: $screen-sm-min) {
+			width: 50%;
+			float: left;
+			padding-left: 15px;
+		}
+	}	// end &__body 
+	
+}

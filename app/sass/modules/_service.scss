@@ -1,0 +1,51 @@
+// ================================================================================
+// Service Style
+// ================================================================================
+
+.service {
+
+	&__header {
+		height: 60px;
+		border-bottom: 1px solid $color--border;
+	}
+
+	&__title {
+		float: left;
+		margin: 0;
+		padding: 0;
+		line-height: 60px;
+	}
+
+	&__nav {
+		line-height: 60px;
+		float: right;
+		color: $mercury;
+		
+		&>i {
+			padding: 10px;
+			cursor: pointer;
+
+			&:hover {
+				color: $gray;
+			}
+
+			&:nth-child(2) {
+				cursor: default;
+				&:hover {
+					color: $mercury;
+				}
+			}
+		}
+	}
+
+	&__content {
+		@include make-row();
+		margin-top: 20px;
+	}
+
+	&__item {
+		margin: 0 10px;
+	}
+
+
+}

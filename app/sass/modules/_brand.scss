@@ -1,0 +1,31 @@
+// ================================================================================
+// Brand Style
+// ================================================================================
+
+.brand {
+	display: block;
+	float: left;
+
+	&__logo {
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 70px;
+
+	}
+	&__name {
+		display: inline-block;
+		font-size: 50px;
+		text-transform: uppercase;
+		vertical-align: middle;
+		margin: 0 0 0 10px;;
+		padding: 0;
+		letter-spacing: 3px;
+
+		&>span {
+			display: block;
+			font-size: 10px;
+			letter-spacing: 1.6px;
+			margin-top: -5px;
+		}
+	}
+}

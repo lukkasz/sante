@@ -1,0 +1,20 @@
+// ================================================================================
+// Featured Style
+// ================================================================================
+
+.featured {
+	background: $alabaster;
+	padding: 60px 0;
+	
+	&__header {
+		text-align: center;
+		& > i {
+			font-size: 24px;
+			color: $color--primary;
+		}
+	}
+
+	&__content {
+		@include make-row();
+	}
+}
