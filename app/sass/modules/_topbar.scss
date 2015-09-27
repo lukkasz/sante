@@ -9,14 +9,22 @@
 	
 	&__item {
 		@include make-xs-column-offset(1);
-		font-size: 14px;
+		font-size: 8px;
+
+		@media (min-width: $screen-sm-min){
+			font-size: 12px;
+		}
 
 		& > i {
 			padding-right: 8px;
-			font-size: 14px;
+			font-size: 10px;
 			vertical-align: middle;
 			margin-top: -5px;
 			color: $color--primary;
+
+			@media (min-width: $screen-sm-min) {
+				font-size: 14px;
+			}
 		}
 
 		&:first-child {

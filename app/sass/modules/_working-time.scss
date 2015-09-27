@@ -3,22 +3,25 @@
 // ================================================================================
 
 .working-time {
+	//margin-top: 60px;
+	position: absolute;
+	bottom: 0;
 	
-	@media (min-width: $screen-sm-min) {
-		position: absolute;
-		bottom: 0;	
-	}
-
 	&__item {
 		background: $color--primary;
 		color: $white;
 		float: left;
-		padding: 30px 20px;
 		text-transform: uppercase;
 		text-align: center;
-		font-size: 20px;
 		font-weight: bold;
-		width: 130px;
+		font-size: 18px;
+		padding: 20px 10px;
+
+		@media (min-width: $screen-sm-min) {
+			padding: 30px 20px;
+			font-size: 20px;
+			width: 150px;
+		}
 
 		& > span {
 			display: block;

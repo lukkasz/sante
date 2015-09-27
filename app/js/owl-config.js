@@ -4,12 +4,11 @@ $(function(){
 
     $owl.owlCarousel({
         items: 4,
-        itemDesktopSmall: [900, 3],
+        itemsDesktopSmall: [1025, 3],
         itemsTablet: [750, 2],
         itemsMobile: [479, 1],
         pagination: false,
-        //rewindNav: false,
-        autoPlay: 3000
+        autoPlay: 4000
     });
 
     $('.glyphicon-menu-left').click(function(){

@@ -14,7 +14,12 @@
 		background-image: url('../images/background-image-fullbody.png');
 		min-height: inherit;
 		background-repeat: no-repeat;
-		background-position: right 15px bottom;
+		background-position: right bottom;
+
+		@media (min-height: $screen-sm-min){
+			background-position: right 15px bottom;	
+		}
+		
 	}
 
 	&__text {
@@ -27,27 +32,42 @@
 		&--accent {
 			//display: inline-block;
 			color: $white !important;
-			font-size: 68px;
+			font-size: 34px;
 			text-transform: uppercase;
 			font-weight: 700;
 			margin-bottom: 0;
 
+			@media (min-width: $screen-sm-min) {
+				font-size: 68px;
+			}
+
 			& > span {
 				display: inline-block;
 				background-color: $black;
-				padding: 0 15px;
-				margin-bottom: 10px;
+				padding: 0 5px;
+				margin-bottom: 5px;
 
 				&:last-child {
 					margin-bottom: 0;
+				}
+
+				@media (min-width: $screen-sm-min) {
+					padding: 0 15px;
+					margin-bottom: 10px;
 				}
 			}
 		}
 
 		&--secondary {
-			font-size: 16px;
+			font-size: 14px;
 			margin-top: 5px;
 			color: $black !important;
+
+			@media (min-width: $screen-sm-min) {
+				font-size: 16px;
+				margin-top: 5px;
+				max-width: 450px;
+			}	
 		}
 	}
 }

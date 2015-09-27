@@ -7,14 +7,38 @@
 	padding: 40px 0;
 	text-align: center;
 
+	@media (min-width: $screen-sm-min) {
+		padding: 10px 0;
+	}
+
+	&__img {
+		margin-right: 10px;
+		& > img {
+			width: 120px;
+		}
+	}
+
 	&__text {
-		font-size: 40px;
+		font-size: 28px;
 		color: $white;
 		display: inline-block;
 		vertical-align: middle;
+		margin-bottom: 15px;
+		@media (min-width: $screen-sm-min) {
+			font-size: 42px;
+			margin-bottom: 0;
+		}
+		
+		& > span {
+			display: block;
+			@media (min-width: $screen-sm-min) {
+				display: inline;
+				padding-left: 10px;
+			}
+		}
 	}
 	&__btn {
-		display: inline-block;
+		display: block;
 		vertical-align: middle;
 		font-size: 24px;
 		color: $white;
@@ -22,7 +46,11 @@
 		padding: 10px 15px;
 		border: 1px solid $white;
 		border-radius: 5px;
-		margin-left: 40px;
+
+		@media (min-width: $screen-sm-min) {
+			display: inline-block;
+			margin-left: 40px;
+		}
 
 		&:hover {
 			color: $color--primary;

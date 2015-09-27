@@ -3,10 +3,13 @@
 // ================================================================================
 
 .service {
+	@media (min-width: $screen-sm-min) {
+		padding-bottom: 100px;	
+	}
 
 	&__header {
-		height: 60px;
 		border-bottom: 1px solid $color--border;
+		margin-bottom: 40px;
 	}
 
 	&__title {
@@ -21,7 +24,7 @@
 		float: right;
 		color: $mercury;
 		
-		&>i {
+		& > i {
 			padding: 10px;
 			cursor: pointer;
 
