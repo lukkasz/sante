@@ -88,7 +88,7 @@
                 <i class="glyphicon glyphicon-leaf"></i>
                 <div class="row">
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs nav-tabs--vertical" role="tablist">
+                    <ul id="navTabs" class="nav nav-tabs nav-tabs--vertical" role="tablist">
                         <li role="presentation" class="active"><a href="#tijelo" aria-controls="tijelo" role="tab" data-toggle="tab">Tretmani Tijela</a></li>
                         <li role="presentation"><a href="#anticelulit" aria-controls="anticelulit" role="tab" data-toggle="tab">Anticelulitni tretmani</a></li>
                         <li role="presentation"><a href="#masaze" aria-controls="masaze" role="tab" data-toggle="tab">Masaže</a></li>
@@ -96,6 +96,17 @@
                         <li role="presentation"><a href="#depilacije" aria-controls="depilacije" role="tab" data-toggle="tab">Depilacije</a></li>
                         <li role="presentation"><a href="#obrve" aria-controls="obrve" role="tab" data-toggle="tab">Njega Obrve</a></li>
                     </ul>
+
+                    <!-- Nav Mobile -->
+                    <select name="tab-select" id="navTabs--mobile" class="nav-tabs--mobile">
+                        <option value="#tijelo">Tretmani tijela</option>
+                        <option value="#anticelulit">Anticelulitni tretmani</option>
+                        <option value="#masaze">Masaze</option>
+                        <option value="#ruke-stopala">Ruke i stopala</option>
+                        <option value="#depilacije">Depilacije</option>
+                        <option value="#obrve">Obrve</option>
+                    </select>
+
 
                     <!-- Tab panes -->
                     <div class="tab-content tab-content--right">
@@ -177,9 +188,10 @@
 
         <script>
         $(function(){
-            $('.nav-tabs--mobile').on('change', function(e){
-                console.log($('.nav-tabs--mobile a'));
-            });
+           $('#navTabs--mobile').on('change', function(e){
+                var link = '#navTabs a[href="' + $(this).val() + '"]';
+                $(link).tab('show');
+           });
         });
         </script>
     </body>
