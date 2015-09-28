@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -16,7 +15,7 @@
         
         <!-- build:css styles/vendor.css -->
         <link rel="stylesheet" href="/bower_components/owlcarousel/owl-carousel/owl.carousel.css">
-        <link rel="stylesheet" href="/bower_components/owlcarousel/owl-carousel/owl.theme.css">
+        <link rel="stylesheet" href="/bower_components/owlcarousel/owl-carousel/owl.theme.css"> 
         <!-- bower:css -->
         <!-- endbower -->
         <!-- endbuild -->
@@ -75,15 +74,40 @@
             </div><!-- end .container -->
         </header>
 
-        <section class="heading__bg-image">
+        <section class="page-header">
             <img src="images/section-bg-white.jpg" alt="">
-            <div class="bg-image--overlay">
+            <div class="page-header--overlay">
                 <div class="container">
                     <h2>Usluge</h2>    
                 </div>    
-            </div>
-            
-            
+            </div><!-- section-heading--overlay -->
+        </section>
+
+        <section class="usluge">
+            <div class="container">
+                <i class="glyphicon glyphicon-leaf"></i>
+                <div class="row">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs nav-tabs--vertical" role="tablist">
+                        <li role="presentation" class="active"><a href="#tijelo" aria-controls="tijelo" role="tab" data-toggle="tab">Tretmani Tijela</a></li>
+                        <li role="presentation"><a href="#anticelulit" aria-controls="anticelulit" role="tab" data-toggle="tab">Anticelulitni tretmani</a></li>
+                        <li role="presentation"><a href="#masaze" aria-controls="masaze" role="tab" data-toggle="tab">Masaže</a></li>
+                        <li role="presentation"><a href="#ruke-stopala" aria-controls="ruke-stopala" role="tab" data-toggle="tab">Njega ruku i stopala</a></li>
+                        <li role="presentation"><a href="#depilacije" aria-controls="depilacije" role="tab" data-toggle="tab">Depilacije</a></li>
+                        <li role="presentation"><a href="#obrve" aria-controls="obrve" role="tab" data-toggle="tab">Njega Obrve</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content tab-content--right">
+                        <div role="tabpanel" class="tab-pane active" id="tijelo">Tretmani tijela</div>
+                        <div role="tabpanel" class="tab-pane" id="anticelulit">Anticelulitni tretmani</div>
+                        <div role="tabpanel" class="tab-pane" id="masaze">Masaže</div>
+                        <div role="tabpanel" class="tab-pane" id="ruke-stopala">Njega Ruku i stopala</div>
+                        <div role="tabpanel" class="tab-pane" id="depilacije">Depilacije</div>
+                        <div role="tabpanel" class="tab-pane" id="obrve">Obrve</div>
+                    </div> 
+                </div><!-- end .row -->
+            </div><!-- end .container -->
         </section>
 
         <section class="cta">
@@ -150,5 +174,13 @@
         <script src="js/main.js"></script>
         <script src="js/owl-config.js"></script>
         <!-- endbuild -->
+
+        <script>
+        $(function(){
+            $('.nav-tabs--mobile').on('change', function(e){
+                console.log($('.nav-tabs--mobile a'));
+            });
+        });
+        </script>
     </body>
 </html>

@@ -76,12 +76,14 @@ section {
 	}
 }
 
-.heading__bg-image {
+
+
+.page-header {
 	position: relative;
 	padding: 0;
+	margin: 0;
 	max-width: 100%;
 	overflow: hidden;
-
 	
 	&  h2 {
 		position: absolute;
@@ -102,15 +104,64 @@ section {
 	& > img {
 		width: 100%;
 		max-height: 150px;	
+		min-height: 80px;
+	}
+
+	&--overlay {
+		position: absolute;
+		background-color: $color--primary;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		opacity: .9;
+	}	
+}
+
+// Nav Tabs override
+
+.nav-tabs--vertical {
+	@include make-sm-column(3);
+	z-index: 1;
+	border: none;
+
+	& > li {
+
+		@media (min-width: $screen-sm-min) {
+			float: none;
+		}
+		
+    & > a {
+			border: 1px solid $color--border !important;
+			border-radius: 0;
+			margin-right: 0;
+			text-transform: uppercase;
+			text-align: center;
+    }
+		
+		&.active > a {
+			border-right: 1px solid transparent !important;
+			border-left: 3px solid $color--primary !important;
+		}
 	}
 }
 
-.bg-image--overlay {
-	position: absolute;
-	background-color: $color--primary;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	opacity: .9;
+.tab-content--right {
+	@include make-sm-column(9);
+
+	border-top: 1px solid $color--border;
+	border-left: 1px solid $color--border;
+	margin-left: -16px;
 }
+
+
+.usluge {
+	padding-top: 60px;
+
+	& i {
+		display: block;
+		margin: 0 auto 40px;
+		text-align: center;
+		color: $color--primary;
+	}
+} 
