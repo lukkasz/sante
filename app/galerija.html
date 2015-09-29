@@ -74,15 +74,59 @@
             </div><!-- end .container -->
         </header>
 
-        <section class="section-heading">
+        <section class="page-header">
             <img src="images/section-bg-white.jpg" alt="">
-            <div class="section-heading--overlay">
+            <div class="page-header--overlay">
                 <div class="container">
-                    <h2>Usluge</h2>    
+                    <h2>Galerija</h2>    
                 </div>    
+            </div><!-- section-heading--overlay -->
+        </section><!-- end .page-header -->
+
+        <section class="container gallery">
+            <ul class="gallery__nav">
+                <li class="gallery__nav__item" data-filter=".salon"><a class="active" href="#">Salon</a></li>
+                <li class="gallery__nav__item" data-filter=".nokti"><a href="#">Nokti</a></li>
+                <li class="gallery__nav__item" data-filter="*"><a href="#">Ostalo</a></li>
+            </ul>
+            <div class="gallery__content is-loading row">
+                <div class="col-sm-4 col-md-3 gallery__item salon">
+                    <img src="images/lice.jpg" alt="">
+                </div>
+                <div class="col-sm-4 col-md-3  gallery__item nokti">
+                    <img src="images/masaza1.jpg" alt="">
+                </div>
+                <div class="col-sm-4 col-md-3 gallery__item salon">
+                    <img src="images/lice.jpg" alt="">
+                </div>
+                <div class="col-sm-4 col-md-3 gallery__item salon nokti">
+                    <img src="images/masaza1.jpg" alt="">
+                </div>
+                <div class="col-sm-4 col-md-3 gallery__item salon">
+                    <img src="images/lice.jpg" alt="">
+                </div>
+                <div class="col-sm-4 col-md-3  gallery__item nokti">
+                    <img src="images/masaza1.jpg" alt="">
+                </div>
+                <div class="col-sm-4 col-md-3 gallery__item nokti">
+                    <img src="images/lice.jpg" alt="">
+                </div>
+                <div class="col-sm-4 col-md-3 gallery__item salon">
+                    <img src="images/masaza1.jpg" alt="">
+                </div>
+                <div class="col-sm-4 col-md-3 gallery__item salon nokti">
+                    <img src="images/lice.jpg" alt="">
+                </div>
+                <div class="col-sm-4 col-md-3  gallery__item salon">
+                    <img src="images/masaza1.jpg" alt="">
+                </div>
+                <div class="col-sm-4 col-md-3 gallery__item nokti">
+                    <img src="images/lice.jpg" alt="">
+                </div>
+                <div class="col-sm-4 col-md-3 gallery__item salon">
+                    <img src="images/masaza1.jpg" alt="">
+                </div>
             </div>
-            
-            
         </section>
 
         <section class="cta">
@@ -143,11 +187,34 @@
 
         <!-- build:js scripts/plugins.js -->
         <script src="/bower_components/owlcarousel/owl-carousel/owl.carousel.js"></script>
+        <script src="/bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
+        <script src="/bower_components/isotope/dist/isotope.pkgd.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
         <script src="js/main.js"></script>
         <script src="js/owl-config.js"></script>
         <!-- endbuild -->
+
+        <script>
+        $(function(){
+            var $galleryContent = $('.gallery__content');
+
+            $galleryContent.imagesLoaded(function(){
+                $galleryContent.removeClass('is-loading');
+                $galleryContent.isotope({
+                    itemSelector: '.gallery__item',
+                    layoutMode: 'fitRows',
+                    filter: '.salon'
+                });
+            });
+
+            $('.gallery__nav__item').on('click', function(){
+                var filter = $(this).attr('data-filter');
+                $galleryContent.isotope({ filter: filter });
+                $('a.active').removeClass('active');
+            });
+        });
+        </script>
     </body>
 </html>

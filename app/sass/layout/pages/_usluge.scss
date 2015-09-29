@@ -1,5 +1,15 @@
 // ================================================================================
-// Included Layout
+// Usluge Style
 // ================================================================================
 
-@import 'pages/usluge';
+
+.usluge {
+	padding-top: 20px;
+
+	& i {
+		display: block;
+		margin: 0 auto 20px;
+		text-align: center;
+		color: $color--primary;
+	}
+} 

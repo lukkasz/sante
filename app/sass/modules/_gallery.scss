@@ -1,0 +1,67 @@
+// ================================================================================
+// Gallery Style
+// ================================================================================
+
+.gallery {
+	
+	&__content {
+		display: block;
+		
+		&.is-loading {
+				background: url(../images/loader.gif) no-repeat top center;
+				min-height:64px;
+
+				& .gallery__item {
+					display: none;
+				}
+		}
+	}
+
+	&__item {
+		margin-bottom: 20px;
+		overflow: hidden;
+		height: 120px;
+		& > img {
+			max-width: 100%;
+		}
+	}
+
+	&__nav {
+		@include clearfix();
+		margin: 0 auto 40px;
+		padding: 0;
+		list-style: none;
+		display: block;
+
+		&__item {
+			float: left;
+
+			&::after {
+				content: "/";
+				margin: 0 10px;
+			}
+
+			&:last-child {
+				&::after {
+					content: none;
+					margin: 0;
+				}
+			}
+
+			& > a {
+				color: $black;
+				&:active, 
+				&:focus, 
+				&:hover,
+				&.active {
+					color: $color--primary;
+				}
+				&.active {
+					color: $color--primary;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	
+}

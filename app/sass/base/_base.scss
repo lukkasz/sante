@@ -118,90 +118,22 @@ section {
 	}	
 }
 
-// Nav Tabs override
+.contact {
+	padding-bottom: 0;
+}
 
-
-.nav-tabs {
-
-	&--vertical {
-		@include make-sm-column(3);
-		z-index: 1;
-		border: none;
-		display: none;
-
-		@media (min-width: $screen-sm-min) {
-			display: block;
-		}
-
-		& > li {
-
-			@media (min-width: $screen-sm-min) {
-				float: none;
-			}
-			
-	    & > a {
-				border: 1px solid $color--border !important;
-				border-radius: 0;
-				margin-right: 0;
-				text-transform: uppercase;
-				text-align: center;
-	    }
-			
-			&.active > a {
-				border-right: 1px solid transparent !important;
-				border-left: 3px solid $color--primary !important;
-			}
-		}
-	}
-
-	&--mobile {
-		position: relative;
-		-webkit-appearance: none;
-		display: block;
-		width: 100%;
-		margin:0 auto 20px;
-		font-size: 16px;
-		opacity: 1;
-		background: $color--primary;
+.find-us {
+	background: $outer-space;
+	margin: 0;
+	text-align: center;
+	& > h2 {
 		color: $white;
-		text-transform: uppercase;
-		height: 40px;
-		border: none;
-		border-radius: 0px !important;
-		
-		&::after {
-			content: " d";
-			position: absolute;
-			right: 5px;
-			top: 2px;
-			color: #fff;
-		}
-
-		@media (min-width: $screen-sm-min) {
-			display: none;
-		}
+		margin: 0;
+		padding: 40px 0;
+		letter-spacing: 2px;
+		font-weight: 700;
 	}
 }
-
-.tab-content--right {
-	@include make-sm-column(9);
-	
-	@media (min-width: $screen-sm-min) {
-		border-top: 1px solid $color--border;
-		border-left: 1px solid $color--border;
-		margin-left: -16px;	
-	}
-	
+.map {
+	min-height: 500px
 }
-
-
-.usluge {
-	padding-top: 60px;
-
-	& i {
-		display: block;
-		margin: 0 auto 40px;
-		text-align: center;
-		color: $color--primary;
-	}
-} 

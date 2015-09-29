@@ -4,7 +4,32 @@
 
 .product {
 	@include clearfix();
-	margin: 10px 0;
+	
+	&--grid {
+		margin: 10px 0;	
+	}
+
+	&--list {
+		margin: 10px 0 20px;
+
+		@media (min-width: $screen-sm-min) {
+			margin-left: 20px;
+		}
+
+		@media (min-width: $screen-md-min) {
+			margin-left: 40px;
+			margin-right: 40px;	
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			border-bottom: 3px solid $color--primary;
+			width: 40%;
+			margin: 0 auto;
+			padding-top: 20px;
+		}
+	} // end &--border-bottom
 
 	&__img {
 		max-height: 300px;
@@ -26,5 +51,26 @@
 			padding-left: 15px;
 		}
 	}	// end &__body 
+
+	&__heading {
+		margin--top: 20px;
+
+		@media (min-width: $screen-sm-min){
+			margin: 0 auto;	
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			border-top: 1px solid $color--border;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			width: 20%;
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+	}
 	
 }

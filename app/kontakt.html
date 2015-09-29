@@ -74,27 +74,51 @@
             </div><!-- end .container -->
         </header>
 
-        <section class="section-heading">
+        <section class="page-header">
             <img src="images/section-bg-white.jpg" alt="">
-            <div class="section-heading--overlay">
+            <div class="page-header--overlay">
                 <div class="container">
-                    <h2>Usluge</h2>    
+                    <h2>Kontakt</h2>    
                 </div>    
-            </div>
-            
-            
-        </section>
-
-
-
-
-
-        <section class="cta">
+            </div><!-- section-heading--overlay -->
+        </section><!-- end .page-header -->
+        
+        <section class="contact">
             <div class="container">
-                <span class="cta__img"><img src="images/logo.png" alt=""></span>
-                <span class="cta__text">Imate pitanje?<span>Želite dogovirti termin?</span></span><a href="#" class="cta__btn">Kontaktirajte nas</a>
+            <div class="row contact__info--top">
+                <div class="col-sm-4"><i class="glyphicon glyphicon-earphone"></i>+385 91 123 4567</div>
+                <div class="col-sm-4"><i class="glyphicon glyphicon-envelope"></i>info@sante.hr</div>
+                <div class="col-sm-4"><i class="glyphicon glyphicon-home"></i>Put pazdigrada 8, Split</div>
+            </div><!-- end .contact__info--top -->
+            <div class="row">
+                <div class="contact__company-info col-sm-5">
+                    <h4>Informacije</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum odio laboriosam quaerat temporibus, ipsa libero distinctio qui quasi necessitatibus, itaque assumenda nam veniam aperiam atque doloribus esse repellendus. Natus, est?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis molestias consectetur nihil architecto quidem rerum dolorum nisi, eveniet mollitia. Illum neque ullam quidem, commodi mollitia dolorum rem accusamus numquam, illo!</p>
+                </div><!-- end .contact__company-info -->
+                <div class="contact__form col-sm-offset-1 col-sm-6">
+                    <h4>Kontaktirajete nas</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Ime i prezime</label>
+                            <input type="name" class="form-control" id="name" placeholder="Ime i prezime">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email adresa</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" id="message" cols="30" rows="10"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success pull-right">Pošalji</button>
+                    </form>
+                </div><!-- end .contact__form -->
+            </div><!-- end .row -->
+            </div><!-- end .container -->
+            <div class="find-us">
+                <h2>Pronađi nas na karti</h2>
             </div>
-        </section><!-- end .cta -->
+            <div class="map" id="map"></div>
+        </section>
 
         <section class="footer-wrap">
             <footer class="footer">
@@ -128,6 +152,8 @@
             </div>
         </section><!-- end .footer-wrap -->
 
+        <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIRoFoz-4oJuhA9Nmpr3om7JMAh9wI91A&callback=gmap.init"></script>
+
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -153,5 +179,50 @@
         <script src="js/main.js"></script>
         <script src="js/owl-config.js"></script>
         <!-- endbuild -->
+        <script>
+        var gmap = (function(){
+
+        var $el = $('#map')[0];
+        var $address = "Put pazdigrada 8, Split";
+        var options = {
+            center: { 
+                lat: -34.397, 
+                lng: 150.64
+            },
+            zoom: 16,
+            disableDefaultUI: true
+        };
+
+      // Initialize Google Map
+      function initMap(){
+        console.log('dsdsd');
+        var map = new google.maps.Map($el, options);
+        var geocoder = new google.maps.Geocoder();
+
+        setGeocode(geocoder, map);  
+      }
+      
+
+      function setGeocode(geocoder, map) {
+        geocoder.geocode({'address': $address}, function(results, status) {
+            if (status === google.maps.GeocoderStatus.OK) {
+              map.setCenter(results[0].geometry.location);
+              var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+              });
+            } else {
+              alert('Geocode was not successful for the following reason: ' + status);
+            }
+          });
+        }
+
+      return {
+        init: initMap
+      }
+
+    }());
+        
+        </script>
     </body>
 </html>
