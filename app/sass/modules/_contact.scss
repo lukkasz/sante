@@ -1,0 +1,65 @@
+// ================================================================================
+// Contact Style
+// ================================================================================
+
+.contact {
+
+
+	&__info {
+		margin-bottom: 40px;
+	
+		& > div {
+			padding: 0;
+			margin-bottom: 10px;
+
+		
+			& > i {
+				background-color: $color--primary;
+				color: $white;
+				padding: 20px;
+				font-size: 18px;
+				margin: 0;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			& > span {
+				
+				padding: 14px;
+				font-size: 20px;
+				margin: 0;
+				display: inline-block;
+				vertical-align: bottom;
+
+			}
+		}
+
+	}
+
+	&__form {
+		margin-bottom: 60px;
+
+		&  label {
+			color: $color--primary;
+			font-size: 14px;
+		}
+
+		& .btn-send {
+			padding-left: 40px !important; 
+			padding-right: 40px !important; 
+			background-color: $color--primary;
+			color: $white;
+			display: block !important;
+			width: 100%;
+
+			@media (min-width: $screen-sm-min){
+				display: inline-block;
+				width: auto;
+			}
+
+			&:hover {
+				background-color: darken($color--primary, 10%);
+			}
+		}
+	}
+}

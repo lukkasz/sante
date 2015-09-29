@@ -85,34 +85,35 @@
         
         <section class="contact">
             <div class="container">
-            <div class="row contact__info--top">
-                <div class="col-sm-4"><i class="glyphicon glyphicon-earphone"></i>+385 91 123 4567</div>
-                <div class="col-sm-4"><i class="glyphicon glyphicon-envelope"></i>info@sante.hr</div>
-                <div class="col-sm-4"><i class="glyphicon glyphicon-home"></i>Put pazdigrada 8, Split</div>
-            </div><!-- end .contact__info--top -->
-            <div class="row">
-                <div class="contact__company-info col-sm-5">
-                    <h4>Informacije</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum odio laboriosam quaerat temporibus, ipsa libero distinctio qui quasi necessitatibus, itaque assumenda nam veniam aperiam atque doloribus esse repellendus. Natus, est?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis molestias consectetur nihil architecto quidem rerum dolorum nisi, eveniet mollitia. Illum neque ullam quidem, commodi mollitia dolorum rem accusamus numquam, illo!</p>
-                </div><!-- end .contact__company-info -->
-                <div class="contact__form col-sm-offset-1 col-sm-6">
-                    <h4>Kontaktirajete nas</h4>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Ime i prezime</label>
-                            <input type="name" class="form-control" id="name" placeholder="Ime i prezime">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email adresa</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" id="message" cols="30" rows="10"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success pull-right">Pošalji</button>
-                    </form>
-                </div><!-- end .contact__form -->
-            </div><!-- end .row -->
+                <div class="row contact__info">
+                    <div class="col-sm-4"><i class="glyphicon glyphicon-earphone"></i><span>+385 91 123 4567</span></div>
+                    <div class="col-sm-4"><i class="glyphicon glyphicon-envelope"></i><span>info@sante.hr</span></div>
+                    <div class="col-sm-4"><i class="glyphicon glyphicon-home"></i><span>Put pazdigrada 8, Split</span></div>
+                </div><!-- end .contact__info -->
+                <div class="row">
+                    <div class="contact__company-info col-sm-5">
+                        <h4>Informacije</h4>
+                        <p>SANTE je dolor sit amet, consectetur adipisicing elit. Eum odio laboriosam quaerat temporibus, ipsa libero distinctio qui quasi necessitatibus, itaque assumenda nam veniam aperiam atque doloribus esse repellendus. Natus, est?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis molestias consectetur nihil architecto quidem rerum dolorum nisi, eveniet mollitia. Illum neque ullam quidem, commodi mollitia dolorum rem accusamus numquam, illo!</p>
+                    </div><!-- end .contact__company-info -->
+                    <div class="contact__form col-sm-offset-1 col-sm-6">
+                        <h4>Kontaktirajete nas</h4>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Ime i prezime</label>
+                                <input type="name" class="form-control" id="name" placeholder="Ime i prezime">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email adresa</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Poruka </label>
+                                <textarea class="form-control" name="message" id="message" cols="30" rows="10"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-send pull-right">Pošalji</button>
+                        </form>
+                    </div><!-- end .contact__form -->
+                </div><!-- end .row -->
             </div><!-- end .container -->
             <div class="find-us">
                 <h2>Pronađi nas na karti</h2>
@@ -173,6 +174,8 @@
 
         <!-- build:js scripts/plugins.js -->
         <script src="/bower_components/owlcarousel/owl-carousel/owl.carousel.js"></script>
+        <script src="/bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
+        <script src="/bower_components/isotope/dist/isotope.pkgd.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
