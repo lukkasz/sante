@@ -72,7 +72,7 @@
 	@include make-sm-column(9);
 	
 	@media (min-width: $screen-sm-min) {
-		border-top: 1px solid $color--border;
+		//border-top: 1px solid $color--border;
 		border-left: 1px solid $color--border;
 		margin-left: -16px;	
 	}

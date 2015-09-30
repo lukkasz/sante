@@ -85,18 +85,18 @@
         
         <section class="contact">
             <div class="container">
-                <div class="row contact__info">
-                    <div class="col-sm-4"><i class="glyphicon glyphicon-earphone"></i><span>+385 91 123 4567</span></div>
-                    <div class="col-sm-4"><i class="glyphicon glyphicon-envelope"></i><span>info@sante.hr</span></div>
-                    <div class="col-sm-4"><i class="glyphicon glyphicon-home"></i><span>Put pazdigrada 8, Split</span></div>
+                <div class="contact__info">
+                    <div class="contact__info__item"><i class="glyphicon glyphicon-earphone"></i><span>+385 91 123 4567</span></div>
+                    <!--<div class="contact__info__item"><i class="glyphicon glyphicon-envelope"></i><span>info@sante.hr</span></div>-->
+                    <div class="contact__info__item"><i class="glyphicon glyphicon-home"></i><span>Put pazdigrada 8, Split</span></div>
                 </div><!-- end .contact__info -->
                 <div class="row">
                     <div class="contact__company-info col-sm-5">
-                        <h4>Informacije</h4>
+                        <h4 class="contact__heading">Informacije</h4>
                         <p>SANTE je dolor sit amet, consectetur adipisicing elit. Eum odio laboriosam quaerat temporibus, ipsa libero distinctio qui quasi necessitatibus, itaque assumenda nam veniam aperiam atque doloribus esse repellendus. Natus, est?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis molestias consectetur nihil architecto quidem rerum dolorum nisi, eveniet mollitia. Illum neque ullam quidem, commodi mollitia dolorum rem accusamus numquam, illo!</p>
                     </div><!-- end .contact__company-info -->
                     <div class="contact__form col-sm-offset-1 col-sm-6">
-                        <h4>Kontaktirajete nas</h4>
+                        <h4 class="contact__heading">Kontaktirajte nas</h4>
                         <form>
                             <div class="form-group">
                                 <label for="name">Ime i prezime</label>
@@ -179,52 +179,13 @@
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
-        <script src="js/main.js"></script>
         <script src="js/owl-config.js"></script>
+        <script src="js/tabHash-helper.js"></script>
+        <script src="js/isotope-config.js"></script>
+        <script src="js/gmap-init.js"></script>
         <!-- endbuild -->
         <script>
-        var gmap = (function(){
-
-        var $el = $('#map')[0];
-        var $address = "Put pazdigrada 8, Split";
-        var options = {
-            center: { 
-                lat: -34.397, 
-                lng: 150.64
-            },
-            zoom: 16,
-            disableDefaultUI: true
-        };
-
-      // Initialize Google Map
-      function initMap(){
-        console.log('dsdsd');
-        var map = new google.maps.Map($el, options);
-        var geocoder = new google.maps.Geocoder();
-
-        setGeocode(geocoder, map);  
-      }
-      
-
-      function setGeocode(geocoder, map) {
-        geocoder.geocode({'address': $address}, function(results, status) {
-            if (status === google.maps.GeocoderStatus.OK) {
-              map.setCenter(results[0].geometry.location);
-              var marker = new google.maps.Marker({
-                map: map,
-                position: results[0].geometry.location
-              });
-            } else {
-              alert('Geocode was not successful for the following reason: ' + status);
-            }
-          });
-        }
-
-      return {
-        init: initMap
-      }
-
-    }());
+        
         
         </script>
     </body>
