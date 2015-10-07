@@ -74,14 +74,14 @@
             </div><!-- end .container -->
         </header>
 
-        <section class="page-header">
+        <section class="feature-image">
             <img src="images/section-bg-white.jpg" alt="">
-            <div class="page-header--overlay">
+            <div class="feature-image--overlay">
                 <div class="container">
                     <h2>Galerija</h2>    
                 </div>    
             </div><!-- section-heading--overlay -->
-        </section><!-- end .page-header -->
+        </section><!-- end .feature-image -->
 
         <section class="container gallery">
             <ul class="gallery__nav">
@@ -194,27 +194,9 @@
         <!-- build:js scripts/main.js -->
         <script src="js/main.js"></script>
         <script src="js/owl-config.js"></script>
+        <script src="js/isotope.js"></script>
         <!-- endbuild -->
 
-        <script>
-        $(function(){
-            var $galleryContent = $('.gallery__content');
-
-            $galleryContent.imagesLoaded(function(){
-                $galleryContent.removeClass('is-loading');
-                $galleryContent.isotope({
-                    itemSelector: '.gallery__item',
-                    layoutMode: 'fitRows',
-                    filter: '.salon'
-                });
-            });
-
-            $('.gallery__nav__item').on('click', function(){
-                var filter = $(this).attr('data-filter');
-                $galleryContent.isotope({ filter: filter });
-                $('a.active').removeClass('active');
-            });
-        });
-        </script>
+        
     </body>
 </html>
