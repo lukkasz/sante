@@ -22,7 +22,8 @@
 				margin-left: 25px;
 				&:hover,
 				&:focus,
-				&:active {
+				&:active,
+				&.active {
 					&:after {
 						content: "";
 						position: absolute;

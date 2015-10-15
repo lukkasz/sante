@@ -1,5 +1,6 @@
 $(function(){
     var $galleryContent = $('.gallery__content');
+    var $gallery__nav__item = $('.gallery__nav__item');
 
     $galleryContent.imagesLoaded(function(){
         $galleryContent.removeClass('is-loading');
@@ -14,9 +15,18 @@ $(function(){
         });
     });
 
-    $('.gallery__nav__item').on('click', function(){
-        var filter = $(this).attr('data-filter');
+    $gallery__nav__item.on('click', function(e){
+        e.preventDefault();
+        var $this = $(this);
+        var filter = $this.attr('data-filter');
+        var $child = $this.children()
+
+        if (!$child.hasClass('active')) {
+            $child.addClass('active')
+            $this.siblings().children().removeClass('active');
+        } 
+
         $galleryContent.isotope({ filter: filter });
-        $('a.active').removeClass('active');
+
     });
 });
