@@ -3,37 +3,44 @@
 // ================================================================================
 
 .contact {
+	//color: $text-color--header;
 
 
 	&__info {
+		@include clearfix();
 		margin-bottom: 40px;
-	
-		& > div {
+
+		@media (min-width: $screen-sm-min) {
+			text-align: center;
+		}
+		
+		&__item {
+			@include make-sm-column(5);
+		
 			padding: 0;
 			margin-bottom: 10px;
+			
+			&:first-child {
+				@include make-sm-column-offset(1);
+			}
 
-		
+
 			& > i {
 				background-color: $color--primary;
 				color: $white;
 				padding: 20px;
 				font-size: 18px;
 				margin: 0;
-				display: inline-block;
-				vertical-align: middle;
 			}
 
 			& > span {
-				
+				color: $text-color--heading;
+				font-weight: 700;
 				padding: 14px;
 				font-size: 20px;
-				margin: 0;
-				display: inline-block;
-				vertical-align: bottom;
 
 			}
-		}
-
+		} // end &__item
 	}
 
 	&__form {
@@ -61,5 +68,12 @@
 				background-color: darken($color--primary, 10%);
 			}
 		}
+	}
+
+	&__heading {
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 20px;
+		color: $text-color--heading;
 	}
 }

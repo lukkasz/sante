@@ -11,6 +11,7 @@
 	position: relative;
 
 	&__image {
+		@extend .container;
 		background-image: url('../images/background-image-fullbody.png');
 		min-height: inherit;
 		background-repeat: no-repeat;

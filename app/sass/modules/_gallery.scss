@@ -3,7 +3,8 @@
 // ================================================================================
 
 .gallery {
-	
+	@extend .container;
+
 	&__content {
 		display: block;
 		
@@ -18,11 +19,19 @@
 	}
 
 	&__item {
-		margin-bottom: 20px;
+		width: 100%;
+		margin-bottom: 10px;
 		overflow: hidden;
 		height: 120px;
 		& > img {
 			max-width: 100%;
+		}
+
+		@media (min-width: $screen-sm-min) {
+			width: 31%;
+		}
+		@media (min-width: $screen-md-min) {
+			width: 23%;
 		}
 	}
 

@@ -84,8 +84,12 @@
             </div><!-- section-heading--overlay -->
         </section><!-- end .feature-image -->
 
-        <section class="usluge">
+        <section>
             <div class="container">
+<<<<<<< HEAD
+=======
+                <!--<i class="glyphicon glyphicon-leaf"></i>-->
+>>>>>>> ea6f29f581847f72d989ee49744930d8a7eeb4f3
                 
                 <!-- Nav tabs -->
                 <ul id="navTabs" class="nav nav-tabs nav-tabs--vertical" role="tablist">
@@ -353,38 +357,10 @@
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
-           <script src="js/main.js"></script>
         <script src="js/owl-config.js"></script>
-        <script src="js/isotope.js"></script>
+        <script src="js/tabHash-helper.js"></script>
+        <script src="js/isotope-config.js"></script>
+        <script src="js/gmap-init.js"></script>
         <!-- endbuild -->
-
-        <script>
-        $(function(){
-           $('#navTabs--mobile').on('change', function(e){
-                var link = '#navTabs a[href="' + $(this).val() + '"]';
-                $(link).tab('show');
-           });
-
-            // $(window).on('load', function(){
-            //     var loc = window.location;
-            //     var link;
-            //     if (loc.hash) {
-            //         link = '#navTabs a[href="' + loc.hash + '"]';
-            //         $(link).tab('show');
-            //     }
-            // });
-           //};
-        });
-
-        $(function(){
-            var loc = window.location;
-            var link;
-
-            if (loc.hash) {
-                link = '#navTabs a[href="' + loc.hash + '"]';
-                $(link).tab('show');
-            }
-        });
-        </script>
     </body>
 </html>
