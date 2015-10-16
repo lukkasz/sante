@@ -3,35 +3,31 @@
 
 // Take hash from SELECT elemnt and open tab that tab on mobile devices
 $(function(){
-   $('#navTabs--mobile').on('change', function(e){
-        var link = '#navTabs a[href="' + $(this).val() + '"]';
-        $(link).tab('show');
-   });
+    var navTabsMobile = $('#navTabs--mobile');
+    var loc = window.location;
+    var link;
 
-    $(window).on('load', function(e){
-        //e.preventDefault();
-        var loc = window.location;
-        var link;
-        if (loc.hash) {
-            link = '#navTabs a[href="' + loc.hash + '"]';
-            $(link).tab('show');
-        }
+    // Open tab from <select> option value 
+    navTabsMobile.on('change', function(e){
+        var optionValue = '#navTabs a[href="' + $(this).val() + '"]';
+        $(optionValue).tab('show');
     });
+
+    
+    // Open tab from window.location.hash 
+    if ( loc.hash ) {
+        
+        link = '#navTabs a[href="' + loc.hash + '"]';
+
+        navTabsMobile.val( loc.hash );
+
+        $(link).tab('show');
+
+        // Clear the hash to prevent jumping to the ID with hash
+        loc.hash = ''
+    }
 
 });
 
 
-// this function takes hash from external link and open tab in service.html with that hash
-// $(function(){
-//     //e.preventDefault();
-//     var loc = window.location;
-//     var link;
 
-//     if (loc.hash) {
-//         link = '#navTabs a[href="' + loc.hash + '"]';
-//         $(link).tab('show');
-        
-//     }
-
-
-// });

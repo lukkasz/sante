@@ -33,11 +33,6 @@ gulp.task('html', ['styles'], function(){
 
 	return gulp.src(bases.app + '*.html')
 		.pipe(assets)
-		.pipe($.if('*.js', $.uglify()))
-		.pipe($.if('*.css', $.minifyCss({ 
-			compability: '*',
-			processImport: false
-		})))
 		.pipe(assets.restore())
 		.pipe($.useref())
 		.pipe(gulp.dest(bases.dist));
